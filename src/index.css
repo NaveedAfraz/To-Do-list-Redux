@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  background-image: url("C:\Users\navee\To-Do-List\src\yohan-marion-G83CtMn7ZxI-unsplash.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.app_container {
+  max-height: 100%;
+  background-color: rgba(96, 20, 20, 0.4); /* Slight transparency for background */
+  width: 60vw; /* Default width for larger screens */
+  padding: 3%;
+  margin-top: 5%;
+  border-radius: 9px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Medium screens (tablets, small desktops) */
+@media (min-width: 1024px) {
+  .app_container {
+    width: 40vw; /* Slightly narrower for medium screens */
+  }
+}
+
+/* Small screens (landscape phones) */
+@media (max-width: 768px) {
+  .app_container {
+    width: 60vw; /* Wider for smaller screens */
+  }
+}
+
+/* Extra small screens (portrait phones) */
+@media (max-width: 480px) {
+  .app_container {
+    width: 90vw; /* Almost full width for small mobile devices */
+  }
+}
+
+/* Ultra small screens (very small phones) */
+@media (max-width: 320px) {
+  .app_container {
+    width: 95vw; /* Nearly full width on the smallest screens */
+  }
+}
+
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.input-field {
+  padding: 12px 15px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.input-field:focus {
+  border-color: #007BFF;
+  background-color: aliceblue;
+  outline: none;
+}
+
+.add-button {
+  margin-left: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.add-button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .input-field {
+    width: 70%;
+  }
+
+  .add-button {
+    width: 20%;
+  }
+}
+
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ 
+  overflow: hidden; /* Ensures content doesn't exceed the container */
+}
+
+.todo-item div {
+  flex: 1; /* Takes available space */
+  margin-right: 10px; /* Spacing between text and buttons */
+  word-break: break-word; /* Break long words onto the next line */
+  white-space: normal; /* Allows text to wrap onto the next line */
+  overflow-wrap: break-word; /* Ensures long words wrap correctly */
+}
+
+
+.todo-item:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.remove-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 3%;
+}
+
+.remove-button:hover {
+  background-color: #c0392b;
+}
+
+.remove-button:active {
+  transform: scale(0.95);
+}
+
+.edit-button {
+  margin-left: 10px; /* Adjust button spacing */
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
